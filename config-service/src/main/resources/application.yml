@@ -4,9 +4,13 @@ server:
 spring:
   application:
     name: config-service
+  profiles:
+    active: native
   cloud:
     config:
       server:
+        native:
+          search-location: file://D:/mas_with_spring_cloud_native-file-repo
         git:
 #          uri: file://D:/msa_with_spring_cloud_config
           uri: https://github.com/jaeheonYoo325/msa_with_spring_cloud_config.git
